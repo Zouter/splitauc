@@ -32,4 +32,6 @@ ggplot(metrics) + geom_ribbon(aes(1-spec, ymax=pmin(tpr, diagonal)), position="i
   geom_label(aes(label=paste0("Specificity: ", round(auroc_specificity, 2))), x=0.65, y=0.65, hjust=0, data=split_metrics) +
   coord_equal()
 
+ggsave("../example.png")
+
 ```
